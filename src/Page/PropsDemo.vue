@@ -29,7 +29,6 @@ export default {
     },
     methods:{
         handleChange(){
-            console.log('child',this.propsString);
             this.propsChange(this.propsString==="success"?"warning":"success")
         }
     },
