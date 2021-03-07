@@ -17,7 +17,7 @@
       <template v-slot:header>
         第1个插槽是头部
       </template>
-      <template v-slot:header>
+      <template v-slot:main>
         第2个插槽是中间
       </template>
 
@@ -36,6 +36,11 @@
             v-model="phoneInfo"
     />
     PhoneInfo:{{phoneInfo.code +"===" + phoneInfo.number }}
+    <hr>
+    <h3>数据更新</h3>
+    <data-updated/>
+    <hr>
+    <computed-and-watch/>
   </div>
 </template>
 
@@ -44,9 +49,10 @@ import PropsDemo from "../Page/PropsDemo";
 import Event from "../Page/Event";
 import SlotDemo from "../Page/SlotDemo";
 import DoubleData from "../Page/doubleData";
+import DataUpdated from "../Page/DataUpdated";
+import ComputedAndWatch from '../Page/ComputedAndWatch.vue';
 export default {
   name: 'HelloWorld',
-
   props: {
     msg: String
   },
@@ -83,7 +89,9 @@ export default {
     PropsDemo,
     Event,
     SlotDemo,
-    DoubleData
+    DoubleData,
+    DataUpdated,
+    ComputedAndWatch
   }
 }
 </script>
